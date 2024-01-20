@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+body{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    box-sizing: border-box;
+    background-image: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);    width: 50px;
+    
+    
+}
+
+h1{
+    -webkit-text-stroke: 4px transparent black;
+   
+    font-size: 1rem;
+    color:aliceblue;
+    stroke: 1px solid  black;
+    font-family: "Salsa", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+img:hover {
+    color: red;
+    background-color: red;
+    border-radius: 18px;
+}
+
+

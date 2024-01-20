@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "News Reading ",
+    "version": "1.0",
+    "description": "Extension that allows reading of news articles",
+    "permissions": ["activeTab"],
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["content.css"]
+      }
+    ],
+    
+    
+    "icons": {
+        "128": "Extension Image/Ailogo.png"
+      }
+  }
+  
+
