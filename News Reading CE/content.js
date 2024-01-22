@@ -21,7 +21,7 @@ document.addEventListener("mouseup", function () {
       // Send the selected text to the extension's popup
       console.log(selectedText);
       chrome.runtime.sendMessage({ selectedTextData: selectedText });
-      // highlightWords(selectedText);
+      highlightWords(selectedText);
     }
   }
 });
@@ -46,14 +46,13 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     sendResponse({ success: true }); //sending response to popup
 
     isSpeechActive = !isSpeechActive;
-    if (isSpeechActive) {
+/*     if (isSpeechActive) {
       highlightWords();
     } else {
       removeHighlight();
-    }
+    } */
   }
 });
-
 
 
 
@@ -66,7 +65,7 @@ function highlightWords(selectedText) {
       // Create a span element
       const span = document.createElement('span');
       span.className = 'highlight';
-      span.textContent = words[currentIndex];
+      span.textContent = words[currentIndex] + ' ';
 
       // Get the selection and range
       const selection = window.getSelection();
@@ -82,8 +81,6 @@ function highlightWords(selectedText) {
 
   highlightNextWord();
 }
-
-
 
 
 
